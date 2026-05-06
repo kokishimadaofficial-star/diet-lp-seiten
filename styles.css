@@ -767,6 +767,75 @@ a {
   background: var(--paper);
 }
 
+/* 共感ヒーロー写真（テキストオーバーレイ） */
+.empathy-visual {
+  position: relative;
+  margin: 0 auto 32px;
+  max-width: 720px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 56px rgba(93, 46, 70, .18);
+}
+
+.empathy-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.empathy-visual__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(58, 37, 48, .05) 0%, rgba(58, 37, 48, .35) 50%, rgba(58, 37, 48, .78) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px 32px 32px;
+  color: #fff;
+}
+
+.empathy-visual__sub {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: .25em;
+  font-weight: 800;
+  opacity: .92;
+}
+
+.empathy-visual__title {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(28px, 7.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.42;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, .42);
+  letter-spacing: .02em;
+}
+
+.empathy-lead-after {
+  text-align: center;
+  font-size: clamp(14px, 3.7vw, 16px);
+  color: var(--ink);
+  line-height: 1.95;
+  margin: 0 auto 30px;
+  max-width: 540px;
+}
+
+@media (max-width: 760px) {
+  .empathy-visual__overlay {
+    padding: 24px 20px 22px;
+  }
+
+  .empathy-visual__sub {
+    font-size: 11px;
+    letter-spacing: .2em;
+  }
+
+  .empathy-visual {
+    margin-bottom: 24px;
+  }
+}
+
 .empathy-headline {
   margin: 10px 0 18px;
   font-family: "Shippori Mincho", serif;
