@@ -767,72 +767,257 @@ a {
   background: var(--paper);
 }
 
-/* 共感ヒーロー写真（テキストオーバーレイ） */
-.empathy-visual {
-  position: relative;
-  margin: 0 auto 32px;
-  max-width: 720px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 24px 56px rgba(93, 46, 70, .18);
+/* === EMPATHY 写真カード版 === */
+.empathy-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-.empathy-visual img {
+.empathy-photo {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #f5e8e0;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 18px 40px rgba(93, 46, 70, .14);
+  transition: transform .25s ease;
+}
+
+.empathy-photo:hover {
+  transform: translateY(-3px);
+}
+
+.empathy-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.empathy-visual__overlay {
+.empathy-photo__cap {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(58, 37, 48, .05) 0%, rgba(58, 37, 48, .35) 50%, rgba(58, 37, 48, .78) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 36px 32px 32px;
+  padding: 22px 20px 18px;
+  background: linear-gradient(180deg, rgba(58, 37, 48, 0) 0%, rgba(58, 37, 48, 0) 35%, rgba(58, 37, 48, .85) 100%);
   color: #fff;
 }
 
-.empathy-visual__sub {
-  margin: 0 0 10px;
-  font-size: 12px;
-  letter-spacing: .25em;
+.empathy-photo__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  font-size: 13px;
   font-weight: 800;
-  opacity: .92;
+  letter-spacing: .04em;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(184, 125, 109, .5);
+  align-self: flex-start;
 }
 
-.empathy-visual__title {
+.empathy-photo__cap p {
   margin: 0;
   font-family: "Shippori Mincho", serif;
-  font-size: clamp(28px, 7.5vw, 44px);
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1.42;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, .42);
+  line-height: 1.55;
   letter-spacing: .02em;
-}
-
-.empathy-lead-after {
-  text-align: center;
-  font-size: clamp(14px, 3.7vw, 16px);
-  color: var(--ink);
-  line-height: 1.95;
-  margin: 0 auto 30px;
-  max-width: 540px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .4);
 }
 
 @media (max-width: 760px) {
-  .empathy-visual__overlay {
-    padding: 24px 20px 22px;
+  .empathy-photos {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 520px;
   }
 
-  .empathy-visual__sub {
-    font-size: 11px;
-    letter-spacing: .2em;
+  .empathy-photo {
+    aspect-ratio: 16 / 11;
   }
 
-  .empathy-visual {
-    margin-bottom: 24px;
+  .empathy-photo__cap {
+    padding: 18px 18px 16px;
+  }
+
+  .empathy-photo__cap p {
+    font-size: 14.5px;
+  }
+
+  .empathy-photo__num {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+/* === EMPATHY 安心感のある橋渡し === */
+.empathy-relief {
+  position: relative;
+  max-width: 660px;
+  margin: 56px auto 0;
+  padding: 48px 32px 40px;
+  background: linear-gradient(180deg, #ffffff 0%, #faf2ec 100%);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: 0 28px 60px rgba(93, 46, 70, .1);
+  overflow: hidden;
+}
+
+.empathy-relief::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent 0%, var(--rose-soft) 20%, var(--rose) 50%, var(--rose-soft) 80%, transparent 100%);
+}
+
+.empathy-relief::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 165, 165, .25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.empathy-relief > * {
+  position: relative;
+  z-index: 1;
+}
+
+.empathy-relief__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(184, 125, 109, .25);
+}
+
+.empathy-relief__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.empathy-relief__top {
+  margin: 0 0 10px;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 700;
+  color: var(--rose);
+  letter-spacing: .04em;
+}
+
+.empathy-relief__main {
+  margin: 0 0 20px;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(24px, 6.4vw, 34px);
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--burgundy);
+  letter-spacing: .02em;
+}
+
+.empathy-relief__main em {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  color: var(--rose);
+  padding: 0 4px;
+}
+
+.empathy-relief__main em::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 8px;
+  background: rgba(184, 125, 109, .25);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.empathy-relief__sub {
+  margin: 0 auto 24px;
+  max-width: 480px;
+  font-size: clamp(14px, 3.8vw, 16px);
+  line-height: 2;
+  color: var(--ink);
+}
+
+.empathy-relief__sub strong {
+  font-weight: 700;
+  color: var(--rose-dark);
+  background: linear-gradient(transparent 65%, rgba(184, 125, 109, .22) 65%);
+  padding: 0 2px;
+}
+
+.empathy-relief__hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: var(--soft);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rose-dark);
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: .04em;
+}
+
+.empathy-relief__hint svg {
+  animation: hint-bob 1.6s ease-in-out infinite;
+}
+
+@media (max-width: 760px) {
+  .empathy-relief {
+    padding: 36px 22px 30px;
+    margin-top: 40px;
+  }
+
+  .empathy-relief__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 14px;
+  }
+
+  .empathy-relief__icon svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .empathy-relief__main {
+    line-height: 1.55;
+  }
+
+  .empathy-relief__sub {
+    line-height: 1.9;
+  }
+
+  .empathy-relief__hint {
+    padding: 10px 18px;
+    font-size: 12px;
   }
 }
 
