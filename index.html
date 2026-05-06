@@ -40,9 +40,12 @@
 
     <section class="section results">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head results-head">
           <p class="section-label">RESULTS</p>
-          <h2>3ヶ月で、体の変化</h2>
+          <h2 class="results-headline">
+            <span class="results-headline__small">たった</span><span class="results-headline__num">3ヶ月</span><span class="results-headline__small">で</span><br>
+            <span class="results-headline__main">こんな結果が</span>
+          </h2>
         </div>
         <div class="ba-grid">
           <figure class="ba-card">
@@ -81,58 +84,130 @@
 
     <section class="section education">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head edu-head">
           <p class="section-label">WHY</p>
-          <h2>なぜ40-50代は<br>痩せにくいのか？</h2>
-          <p>意志や努力の問題ではなく、<br>体の仕組みが変わっているからです。</p>
-        </div>
-
-        <div class="edu-grid">
-          <article class="edu-card">
-            <div class="edu-card__media">
-              <span class="edu-card__num">01</span>
-              <img src="img/edu-hormone.jpg" alt="">
-            </div>
-            <div class="edu-card__body">
-              <h3>ホルモンバランスの変化</h3>
-              <p>更年期前後で女性ホルモンが減ると、お腹まわりに脂肪がつきやすくなります。</p>
-            </div>
-          </article>
-
-          <article class="edu-card">
-            <div class="edu-card__media">
-              <span class="edu-card__num">02</span>
-              <img src="img/edu-metabolism.jpg" alt="">
-            </div>
-            <div class="edu-card__body">
-              <h3>基礎代謝の低下</h3>
-              <p>筋肉量が落ちることで、若い頃と同じ食事量でも太りやすい体に。</p>
-            </div>
-          </article>
-
-          <article class="edu-card">
-            <div class="edu-card__media">
-              <span class="edu-card__num">03</span>
-              <img src="img/edu-pelvis.jpg" alt="">
-            </div>
-            <div class="edu-card__body">
-              <h3>姿勢・骨盤のゆがみ</h3>
-              <p>長年の生活習慣で骨盤が開き、ぽっこりお腹や太もも太りの原因に。</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="edu-conclusion">
-          <p class="edu-conclusion__lead">
-            <span>これらをまとめて整える方法を、</span><br>
-            <strong>LINE登録特典の<em>7ステップ</em>で全公開</strong>
+          <h2 class="edu-headline">
+            <span class="edu-headline__sub">頑張ってるのに痩せない…</span><br>
+            <span class="edu-headline__main">それ、<em>あなたのせい</em>じゃない</span>
+          </h2>
+          <p class="edu-lead">
+            40代・50代で痩せにくいのは、<br>
+            <strong>体の仕組みが3つも同時に変化しているから</strong>。<br>
+            まずは「敵」を知ることから始めましょう。
           </p>
-          <a class="cta-card__button cta-card__button--compact" href="#entry">
+        </div>
+
+        <div class="edu-stack">
+          <!-- POINT 01 -->
+          <article class="edu-block">
+            <div class="edu-block__head">
+              <div class="edu-block__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48">
+                  <circle cx="32" cy="32" r="30" fill="#ffeef1"/>
+                  <path d="M32 48s-14-8.5-14-19.5C18 22 23 17 29 17c2 0 4 1 3 3 0-2 2-3 4-3 6 0 11 5 11 11.5C46 39.5 32 48 32 48z" fill="#e85a6a"/>
+                  <circle cx="24" cy="24" r="2" fill="#fff" opacity=".7"/>
+                </svg>
+              </div>
+              <div>
+                <p class="edu-block__num">POINT 01</p>
+                <h3 class="edu-block__title">女性ホルモンの<br>急激な減少</h3>
+              </div>
+            </div>
+
+            <img class="edu-block__img" src="img/edu-hormone.jpg" alt="" loading="lazy">
+
+            <div class="edu-block__body">
+              <p>40代後半から女性ホルモン（エストロゲン）が急激に減ります。エストロゲンには<strong>脂肪の蓄積を抑える働き</strong>があるため、減少すると<strong>お腹まわり・背中・二の腕に脂肪がつきやすく</strong>なります。</p>
+              <div class="edu-block__highlight">
+                <span class="edu-block__highlight-label">ここがポイント</span>
+                <p>「若い頃と同じ食事量でも太る」のは、<strong>意志の弱さではなくホルモンの仕業</strong>。だから根性論で解決しません。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- POINT 02 -->
+          <article class="edu-block">
+            <div class="edu-block__head">
+              <div class="edu-block__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48">
+                  <circle cx="32" cy="32" r="30" fill="#fff3e6"/>
+                  <path d="M28 12l-4 16h8l-6 24 18-26h-10l6-14z" fill="#e89b3a"/>
+                </svg>
+              </div>
+              <div>
+                <p class="edu-block__num">POINT 02</p>
+                <h3 class="edu-block__title">基礎代謝が<br>20代より約200kcal減</h3>
+              </div>
+            </div>
+
+            <img class="edu-block__img" src="img/edu-metabolism.jpg" alt="" loading="lazy">
+
+            <div class="edu-block__body">
+              <p>40-50代になると、筋肉量が落ち <strong>1日に消費するカロリーが20代より約200kcalも少なく</strong>なります。これはおにぎり1個分。<strong>同じ食事量でも自然に太る計算</strong>です。</p>
+              <div class="edu-stat-row" aria-hidden="true">
+                <div class="edu-stat">
+                  <span class="edu-stat__age">20代</span>
+                  <span class="edu-stat__kcal">1,400<small>kcal</small></span>
+                </div>
+                <span class="edu-stat-arrow">→</span>
+                <div class="edu-stat edu-stat--alert">
+                  <span class="edu-stat__age">50代</span>
+                  <span class="edu-stat__kcal">1,200<small>kcal</small></span>
+                </div>
+              </div>
+              <div class="edu-block__highlight">
+                <span class="edu-block__highlight-label">ここがポイント</span>
+                <p>無理な食事制限より、<strong>少ない筋肉を効率よく使う</strong>ことが正解。短時間でできる方法があります。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- POINT 03 -->
+          <article class="edu-block">
+            <div class="edu-block__head">
+              <div class="edu-block__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="48" height="48">
+                  <circle cx="32" cy="32" r="30" fill="#eaf3ed"/>
+                  <path d="M22 14h20v6H22zm0 12h20v6H22zm0 12h20v6H22zm0 12h20v4H22z" fill="#60766a"/>
+                </svg>
+              </div>
+              <div>
+                <p class="edu-block__num">POINT 03</p>
+                <h3 class="edu-block__title">姿勢・骨盤の<br>長年のゆがみ</h3>
+              </div>
+            </div>
+
+            <img class="edu-block__img" src="img/edu-pelvis.jpg" alt="" loading="lazy">
+
+            <div class="edu-block__body">
+              <p>長年の生活習慣で<strong>骨盤が開き、内臓が下がる</strong>と、ぽっこりお腹・反り腰・太もも太りの原因に。脂肪を落としても<strong>姿勢が悪いと痩せて見えない</strong>のはこのため。</p>
+              <div class="edu-block__highlight">
+                <span class="edu-block__highlight-label">ここがポイント</span>
+                <p>整体の視点で<strong>土台を整える</strong>と、同じ体重でも見た目が大きく変わります。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 解決への橋渡し -->
+        <div class="edu-bridge">
+          <p class="edu-bridge__hook">じゃあ、どうすればいいの？</p>
+          <p class="edu-bridge__answer">
+            この<em>3つを同時に整える方法</em>を、<br>
+            院長監修の<strong>「7ステップ」</strong>にまとめました。
+          </p>
+          <ul class="edu-bridge__steps" aria-label="解決のキーワード">
+            <li><span>1</span>整える</li>
+            <li><span>2</span>動かす</li>
+            <li><span>3</span>続ける</li>
+          </ul>
+          <a class="cta-card__button" href="#entry">
             <svg class="cta-card__line-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path fill="#fff" d="M12 3C6.48 3 2 6.62 2 11.07c0 2.84 1.84 5.34 4.62 6.83-.2.74-.74 2.78-.85 3.21-.13.54.2.53.42.39.17-.11 2.7-1.83 3.79-2.57.66.1 1.34.15 2.02.15 5.52 0 10-3.62 10-8.07S17.52 3 12 3z"/>
             </svg>
-            <span class="cta-card__button-text">解決方法を無料で受け取る</span>
+            <span class="cta-card__button-text">7ステップを無料で受け取る</span>
           </a>
+          <p class="edu-bridge__note">LINE登録特典・1分で完了</p>
         </div>
       </div>
     </section>
@@ -165,43 +240,52 @@
       <svg viewBox="0 0 120 16" width="120" height="16"><path d="M0 8 H50 M70 8 H120" stroke="#d9a3a8" stroke-width="1.2"/><circle cx="60" cy="8" r="3.5" fill="#e85a6a"/></svg>
     </div>
 
-    <section class="section voices">
+    <section class="section story">
       <div class="container">
-        <div class="section-head">
-          <p class="section-label">VOICE</p>
-          <h2>受講生の声</h2>
+        <div class="section-head story-head">
+          <p class="section-label">MESSAGE</p>
+          <h2 class="story-headline">
+            <span class="story-headline__sub">院長からあなたへ</span><br>
+            <span class="story-headline__main">私自身も、ずっと<br>悩んできました。</span>
+          </h2>
         </div>
-        <div class="voice-grid">
-          <article>
-            <img src="img/voice-1.jpg" alt="">
-            <p>「体を整える考え方が新鮮でした。」</p>
-            <span>48歳・主婦</span>
-          </article>
-          <article>
-            <img src="img/voice-3.jpg" alt="">
-            <p>「短い動画で続けやすいです。」</p>
-            <span>52歳・会社員</span>
-          </article>
-          <article>
-            <img src="img/voice-5.jpg" alt="">
-            <p>「年齢のせいと諦めていました。」</p>
-            <span>45歳・パート勤務</span>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <div class="divider" aria-hidden="true">
-      <svg viewBox="0 0 120 16" width="120" height="16"><path d="M0 8 H50 M70 8 H120" stroke="#d9a3a8" stroke-width="1.2"/><circle cx="60" cy="8" r="3.5" fill="#e85a6a"/></svg>
-    </div>
+        <div class="story-card">
+          <div class="story-card__photo">
+            <img src="img/profile-main.jpg" alt="整体院誠天 院長 嶋田正史" loading="lazy">
+            <div class="story-card__caption">
+              <p class="story-card__name">嶋田 正史</p>
+              <p class="story-card__role">明石市 整体院誠天 院長</p>
+            </div>
+          </div>
 
-    <section class="section profile">
-      <div class="container profile__grid">
-        <img src="img/profile-main.jpg" alt="整体院誠天 代表">
-        <div>
-          <p class="section-label">SUPERVISOR</p>
-          <h2>整体院誠天 監修</h2>
-          <p>明石市・40代以降の女性の体型変化に特化。整体の視点から、自宅で始められるやさしいセルフケアをお届けします。</p>
+          <div class="story-card__body">
+            <p class="story-paragraph">整体師として現場に立ち、これまで <strong>のべ3,000名以上</strong> の女性の体と向き合ってきました。</p>
+
+            <p class="story-paragraph">その中で、いちばん多かったのが<br><span class="story-mark">「頑張ってるのに、痩せない」</span><br>という40-50代女性の声でした。</p>
+
+            <p class="story-paragraph">食事を減らしても、運動を増やしても、結果が出ない。<br>そして自分を責めてしまう…。</p>
+
+            <p class="story-paragraph"><strong>でも、それはあなたのせいじゃありません。</strong></p>
+
+            <p class="story-paragraph">私自身、家族や身近な女性のダイエットをサポートする中で、若い頃と同じやり方が通用しないことに気づきました。<strong>食事制限と運動だけでは、限界がある</strong>と。</p>
+
+            <p class="story-paragraph">何度も試行錯誤して辿り着いたのが、<br><span class="story-mark">整体の視点で「体の土台」から整える</span><br>という方法です。</p>
+
+            <p class="story-paragraph">骨盤を整え、姿勢を変え、巡りをよくする。<br>そして無理なく続けられる食事と習慣を組み合わせる。</p>
+
+            <p class="story-paragraph">この方法で、これまで<strong>本当に多くの方が</strong>3ヶ月で体を変え、リバウンドせずに維持できています。</p>
+
+            <p class="story-paragraph story-paragraph--final">
+              「もう年だから」と諦めかけているあなたへ。<br>
+              <strong>あなたの「最後のダイエット」を、心からサポートさせてください。</strong>
+            </p>
+
+            <div class="story-sign">
+              <span class="story-sign__label">整体院誠天 院長</span>
+              <span class="story-sign__name">嶋田 正史</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
