@@ -5,9 +5,14 @@
 // Scroll-triggered fade-up
 (function () {
   const items = document.querySelectorAll(
-    '.fv__points, .trouble__list, .trouble__msg, .warning__body, .edu__card, .edu__summary, .myth__item, .myth__truth, .solution-edu__step, .solution-edu__merge, .offer__inner, .numbers__list li, .voice__item, .profile__inner, .bonus__list li, .bonus__total, .qa__item, .letter__body, .cta-final__merits, .btn-line--final'
+    '.hero__points, .hero__title, .block__title, .block__lead, .block__msg, .check-list li, .num-list li, .myth-list li, .day-list li, .numbers-list li, .voice-item, .profile-list, .bonus-list li, .bonus-total, .qa-item, .letter-body p, .final-merits, .btn-line--final'
   );
-  items.forEach((el) => el.classList.add('animate-up'));
+  items.forEach((el, i) => {
+    el.classList.add('animate-up');
+    if (i % 3 === 0) el.style.transitionDelay = '0s';
+    else if (i % 3 === 1) el.style.transitionDelay = '0.1s';
+    else el.style.transitionDelay = '0.2s';
+  });
 
   if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-in'));
@@ -23,9 +28,8 @@
         }
       });
     },
-    { rootMargin: '-10% 0px -10% 0px', threshold: 0.05 }
+    { rootMargin: '-8% 0px -8% 0px', threshold: 0.05 }
   );
-
   items.forEach((el) => io.observe(el));
 })();
 
@@ -33,16 +37,16 @@
 (function () {
   const fcta = document.querySelector('.float-cta');
   if (!fcta) return;
-  const fv = document.querySelector('.fv');
+  const hero = document.querySelector('.hero');
   const finalCta = document.querySelector('#cta-final');
   fcta.style.opacity = '0';
   fcta.style.pointerEvents = 'none';
   fcta.style.transition = 'opacity 0.4s, transform 0.4s';
 
   const update = () => {
-    const fvBottom = fv ? fv.getBoundingClientRect().bottom : 0;
+    const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
     const finalTop = finalCta ? finalCta.getBoundingClientRect().top : Infinity;
-    const visible = fvBottom < 80 && finalTop > window.innerHeight * 0.6;
+    const visible = heroBottom < 80 && finalTop > window.innerHeight * 0.6;
     if (visible) {
       fcta.style.opacity = '1';
       fcta.style.pointerEvents = 'auto';
@@ -58,7 +62,7 @@
 
 // Number count-up
 (function () {
-  const nums = document.querySelectorAll('.numbers__num');
+  const nums = document.querySelectorAll('.numbers-list em');
   if (!nums.length || !('IntersectionObserver' in window)) return;
 
   const animate = (el) => {
@@ -70,18 +74,12 @@
     const isFloat = match[1].includes('.');
     const duration = 1400;
     const start = performance.now();
-    const startVal = 0;
 
     const tick = (now) => {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      const cur = startVal + (target - startVal) * eased;
-      const display = isFloat ? cur.toFixed(1) : Math.floor(cur).toLocaleString();
-      const span = el.querySelector('span');
-      el.childNodes[0].nodeValue = display;
-      if (span) {
-        // already in DOM
-      }
+      const cur = target * eased;
+      el.childNodes[0].nodeValue = isFloat ? cur.toFixed(1) : Math.floor(cur).toLocaleString();
       if (p < 1) requestAnimationFrame(tick);
       else el.childNodes[0].nodeValue = isFloat ? target.toFixed(1) : target.toLocaleString();
     };
@@ -100,7 +98,7 @@
   nums.forEach((n) => io.observe(n));
 })();
 
-// Smooth scroll for in-page anchors (fallback for older Safari)
+// Smooth scroll for in-page anchors
 (function () {
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
