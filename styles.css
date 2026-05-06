@@ -90,14 +90,17 @@ a {
 }
 
 .hero__media {
-  background: url("img/hero.jpg") center/cover no-repeat;
-  transform: scale(1.03);
+  background:
+    radial-gradient(circle at 72% 38%, rgba(255, 226, 182, .16) 0 16%, transparent 38%),
+    url("img/hero.jpg") center right/cover no-repeat;
+  filter: saturate(.96) contrast(1.05);
+  transform: scale(1.02);
 }
 
 .hero__shade {
   background:
-    linear-gradient(90deg, rgba(32, 25, 19, .84) 0%, rgba(32, 25, 19, .68) 48%, rgba(32, 25, 19, .2) 100%),
-    linear-gradient(0deg, rgba(32, 25, 19, .4), rgba(32, 25, 19, .1));
+    linear-gradient(90deg, rgba(31, 24, 20, .92) 0%, rgba(48, 34, 30, .8) 42%, rgba(69, 44, 42, .28) 72%, rgba(38, 27, 24, .18) 100%),
+    linear-gradient(0deg, rgba(32, 25, 19, .52), rgba(32, 25, 19, .08));
 }
 
 .hero__inner {
@@ -121,7 +124,7 @@ a {
   max-width: 740px;
   margin: 0;
   font-family: "Shippori Mincho", serif;
-  font-size: clamp(42px, 6vw, 76px);
+  font-size: clamp(42px, 5.7vw, 72px);
   line-height: 1.16;
   letter-spacing: 0;
 }
@@ -135,6 +138,7 @@ a {
   margin: 26px 0 0;
   font-size: 19px;
   font-weight: 700;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .34);
 }
 
 .hero__actions {
