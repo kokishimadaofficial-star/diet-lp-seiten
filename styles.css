@@ -111,6 +111,264 @@ a {
   background: var(--paper);
 }
 
+/* === CTA Card (TOP画像下) === */
+.cta-card-section {
+  padding: 24px 16px 40px;
+  background: linear-gradient(180deg, #fff5f6 0%, var(--paper) 100%);
+}
+
+.cta-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 24px 26px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 18px 44px rgba(184, 82, 100, .14);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card::before,
+.cta-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: .55;
+  z-index: 0;
+}
+
+.cta-card::before {
+  background: #ffd1d6;
+  top: -30px;
+  left: -30px;
+}
+
+.cta-card::after {
+  background: #ffe2b6;
+  bottom: -40px;
+  right: -30px;
+}
+
+.cta-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-card__kicker {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 5px 14px;
+  background: var(--rose);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  border-radius: 999px;
+}
+
+.cta-card__title {
+  margin: 0 0 16px;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(22px, 5.4vw, 28px);
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.cta-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, #06c755 0%, #04a046 100%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(6, 199, 85, .35), inset 0 -3px 0 rgba(0, 0, 0, .12);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.cta-card__button:hover,
+.cta-card__button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(6, 199, 85, .42), inset 0 -3px 0 rgba(0, 0, 0, .12);
+}
+
+.cta-card__button:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 14px rgba(6, 199, 85, .3), inset 0 -2px 0 rgba(0, 0, 0, .15);
+}
+
+.cta-card__line-icon {
+  flex-shrink: 0;
+}
+
+.cta-card__button-text {
+  white-space: nowrap;
+}
+
+.cta-card__button--compact {
+  max-width: 320px;
+  padding: 14px 18px;
+  font-size: 15px;
+}
+
+.cta-card__note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* === B/A Quote === */
+.ba-quote {
+  margin: 0;
+  padding: 14px 16px 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--rose-dark);
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: .01em;
+}
+
+.ba-card figcaption {
+  padding-top: 8px;
+}
+
+/* === Education Section === */
+.education {
+  background: var(--paper);
+}
+
+.education .section-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.education .section-head h2 {
+  margin: 8px 0 14px;
+  line-height: 1.35;
+}
+
+.education .section-head p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.edu-grid {
+  display: grid;
+  gap: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.edu-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(54, 39, 30, .08);
+}
+
+.edu-card__media {
+  position: relative;
+  background: var(--soft);
+}
+
+.edu-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.edu-card__num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 0;
+  box-shadow: 0 4px 10px rgba(185, 101, 112, .4);
+  z-index: 1;
+}
+
+.edu-card__body {
+  padding: 18px 22px 18px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edu-card__body h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-family: "Shippori Mincho", serif;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+
+.edu-card__body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.edu-conclusion {
+  margin: 36px auto 0;
+  max-width: 580px;
+  padding: 28px 24px;
+  background: linear-gradient(135deg, #fff5f6 0%, #fff 100%);
+  border-radius: 18px;
+  border: 1.5px dashed var(--rose);
+  text-align: center;
+}
+
+.edu-conclusion__lead {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+.edu-conclusion__lead strong {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 900;
+  font-size: 17px;
+  color: var(--rose-dark);
+}
+
+.edu-conclusion__lead em {
+  font-style: normal;
+  font-size: 22px;
+  color: var(--rose);
+  font-family: "Shippori Mincho", serif;
+}
+
 .hero {
   position: relative;
   min-height: 92svh;
@@ -628,7 +886,7 @@ p {
   }
 
   .hero-image {
-    padding: 0 0 20px;
+    padding: 0 0 4px;
   }
 
   .hero-cta {
@@ -638,6 +896,78 @@ p {
 
   .divider {
     padding: 18px 0;
+  }
+
+  .cta-card-section {
+    padding: 16px 14px 30px;
+  }
+
+  .cta-card {
+    padding: 22px 18px 20px;
+    border-radius: 18px;
+  }
+
+  .cta-card__title {
+    font-size: 21px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .cta-card__button {
+    padding: 15px 16px;
+    font-size: 16px;
+  }
+
+  .edu-grid {
+    gap: 16px;
+  }
+
+  .edu-card {
+    grid-template-columns: 130px 1fr;
+    gap: 14px;
+  }
+
+  .edu-card__num {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .edu-card__body {
+    padding: 14px 16px 14px 0;
+  }
+
+  .edu-card__body h3 {
+    font-size: 16px;
+  }
+
+  .edu-card__body p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .edu-conclusion {
+    padding: 24px 18px;
+    margin-top: 28px;
+  }
+
+  .edu-conclusion__lead {
+    font-size: 14px;
+  }
+
+  .edu-conclusion__lead strong {
+    font-size: 16px;
+  }
+
+  .edu-conclusion__lead em {
+    font-size: 20px;
+  }
+
+  .ba-quote {
+    font-size: 13px;
+    padding: 12px 14px 2px;
   }
 
   .hero {
