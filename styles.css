@@ -762,6 +762,788 @@ a {
   color: var(--muted);
 }
 
+/* === EMPATHY 共感セクション === */
+.empathy {
+  background: var(--paper);
+}
+
+.empathy-headline {
+  margin: 10px 0 18px;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.empathy-headline__sub {
+  font-size: clamp(15px, 4vw, 18px);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.empathy-headline__main {
+  display: inline-block;
+  font-size: clamp(28px, 7vw, 38px);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.empathy-lead {
+  font-size: clamp(14px, 3.7vw, 16px);
+  color: var(--ink);
+  line-height: 1.95;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.empathy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  display: grid;
+  gap: 14px;
+}
+
+.empathy-list li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: center;
+  background: #fff;
+  padding: 18px 22px 18px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--rose-soft);
+}
+
+.empathy-list__icon {
+  width: 44px;
+  height: 44px;
+  background: #f5e8e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.empathy-list__text {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: "Shippori Mincho", serif;
+}
+
+.empathy-bridge {
+  margin: 44px auto 0;
+  max-width: 580px;
+  text-align: center;
+  padding: 28px 22px;
+  background: linear-gradient(135deg, #fff 0%, #f5e8e0 100%);
+  border-radius: 18px;
+  border: 1.5px solid var(--rose-soft);
+}
+
+.empathy-bridge p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--ink);
+  font-family: "Shippori Mincho", serif;
+}
+
+.empathy-bridge p strong {
+  color: var(--rose-dark);
+  font-weight: 800;
+  font-size: 1.05em;
+}
+
+.empathy-bridge__sub {
+  margin-top: 16px !important;
+  padding-top: 16px;
+  border-top: 1px dashed var(--rose-soft);
+  font-size: 15px !important;
+  color: var(--rose-dark) !important;
+}
+
+/* === WRONG METHODS 間違った方法 === */
+.wrong-methods {
+  background: linear-gradient(180deg, #f5e8e0 0%, var(--paper) 100%);
+}
+
+.wm-headline {
+  margin: 10px 0 14px;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.wm-headline__sub {
+  font-size: clamp(15px, 4vw, 18px);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.wm-headline__main {
+  display: inline-block;
+  font-size: clamp(26px, 6.5vw, 36px);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 8px;
+}
+
+.wm-lead {
+  font-size: clamp(14px, 3.7vw, 16px);
+  color: var(--ink);
+  margin: 0 auto;
+}
+
+.wm-lead strong {
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.wm-stack {
+  display: grid;
+  gap: 18px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.wm-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 26px 24px 24px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.wm-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--rose-soft) 0%, var(--rose) 100%);
+}
+
+.wm-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.wm-card__num {
+  flex-shrink: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: 700;
+  color: var(--rose);
+  line-height: 1;
+  margin-top: -2px;
+}
+
+.wm-card__head h3 {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(18px, 4.6vw, 22px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.wm-card p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink);
+  padding-left: 0;
+}
+
+.wm-card p strong {
+  color: var(--rose-dark);
+  background: linear-gradient(transparent 70%, rgba(184, 125, 109, .22) 70%);
+  padding: 0 2px;
+  font-weight: 700;
+}
+
+.wm-conclusion {
+  margin: 36px auto 0;
+  max-width: 580px;
+  text-align: center;
+  padding: 28px 22px;
+  background: var(--burgundy);
+  border-radius: 18px;
+  color: #fff;
+}
+
+.wm-conclusion p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.85;
+  font-family: "Shippori Mincho", serif;
+}
+
+.wm-conclusion__strong {
+  margin-top: 10px !important;
+  font-size: clamp(18px, 4.8vw, 22px) !important;
+  font-weight: 700;
+  color: var(--rose-soft) !important;
+}
+
+/* === SOLUTION 解決法 === */
+.solution {
+  background: var(--paper);
+}
+
+.sol-headline {
+  margin: 10px 0 14px;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+}
+
+.sol-headline__sub {
+  font-size: clamp(15px, 4vw, 18px);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.sol-headline__main {
+  display: inline-block;
+  font-size: clamp(26px, 6.5vw, 36px);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 8px;
+}
+
+.sol-lead {
+  font-size: clamp(14px, 3.7vw, 16px);
+  color: var(--ink);
+  line-height: 1.95;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.sol-lead strong {
+  color: var(--rose-dark);
+  font-weight: 700;
+}
+
+.sol-stack {
+  display: grid;
+  gap: 22px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sol-step {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.sol-step__head {
+  padding: 24px 24px 16px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff 0%, #f5e8e0 100%);
+  border-bottom: 1px solid var(--soft);
+}
+
+.sol-step__num {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  color: var(--rose);
+}
+
+.sol-step__num em {
+  font-style: normal;
+  font-family: "Shippori Mincho", serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 4px;
+  color: var(--burgundy);
+}
+
+.sol-step__head h3 {
+  margin: 0 0 6px;
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .04em;
+}
+
+.sol-step__tag {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sol-step__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.sol-step__points {
+  list-style: none;
+  padding: 22px 24px 24px;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.sol-step__points li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  padding-left: 22px;
+  position: relative;
+}
+
+.sol-step__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 12px;
+  height: 12px;
+  background: var(--rose);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(184, 125, 109, .2);
+}
+
+/* === MID CTA === */
+.mid-cta {
+  margin: 40px auto 0;
+  max-width: 540px;
+  padding: 28px 22px;
+  background: #fff;
+  border: 2px dashed var(--rose);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.mid-cta__lead {
+  margin: 0 0 18px;
+  font-size: clamp(15px, 4vw, 17px);
+  line-height: 1.85;
+  color: var(--ink);
+  font-family: "Shippori Mincho", serif;
+}
+
+.mid-cta__lead strong {
+  color: var(--rose-dark);
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+/* === RESULTS lead === */
+.results-lead {
+  margin: 16px auto 0;
+  font-size: clamp(14px, 3.7vw, 16px);
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+/* === OFFER オファー === */
+.offer {
+  background: linear-gradient(180deg, var(--paper) 0%, #f5e8e0 100%);
+}
+
+.offer-headline {
+  margin: 10px 0 14px;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+}
+
+.offer-headline__sub {
+  font-size: clamp(15px, 4vw, 18px);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.offer-headline__main {
+  display: inline-block;
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 8px;
+}
+
+.offer-headline__main em {
+  font-style: normal;
+  color: var(--rose);
+}
+
+.offer-lead {
+  font-size: clamp(14px, 3.8vw, 16px);
+  color: var(--ink);
+  line-height: 1.95;
+}
+
+.offer-lead__strike {
+  text-decoration: line-through;
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+.offer-lead strong {
+  color: var(--rose-dark);
+  font-weight: 800;
+}
+
+.offer-days {
+  display: grid;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.offer-day {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 18px;
+  align-items: center;
+  position: relative;
+}
+
+.offer-day__num {
+  font-family: "Shippori Mincho", serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+  background: var(--rose);
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.offer-day h3 {
+  margin: 0 0 4px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.offer-day p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.offer-day--final {
+  background: linear-gradient(135deg, #fff 0%, #f0d8d5 100%);
+  border: 2px solid var(--rose);
+}
+
+.offer-day--final .offer-day__num {
+  background: var(--burgundy);
+}
+
+.offer-bonus {
+  margin: 32px auto 0;
+  max-width: 640px;
+  padding: 28px 24px 26px;
+  background: var(--burgundy);
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+}
+
+.offer-bonus::before {
+  content: "BONUS";
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: var(--rose);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .2em;
+}
+
+.offer-bonus__title {
+  margin: 0 0 14px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--rose-soft);
+}
+
+.offer-bonus__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.offer-bonus__list li {
+  font-size: 14px;
+  line-height: 1.75;
+  padding-left: 22px;
+  position: relative;
+  color: rgba(255, 255, 255, .92);
+}
+
+.offer-bonus__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--rose-soft);
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.offer-bonus__list li strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* === FAQ === */
+.faq {
+  background: var(--paper);
+}
+
+.faq-headline {
+  margin: 10px 0 0;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+}
+
+.faq-headline__sub {
+  font-size: clamp(15px, 4vw, 18px);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.faq-headline__main {
+  display: inline-block;
+  font-size: clamp(26px, 6.5vw, 36px);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 8px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+
+.faq-item[open] {
+  box-shadow: 0 14px 30px rgba(93, 46, 70, .12);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 50px 18px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: "Shippori Mincho", serif;
+  position: relative;
+  line-height: 1.6;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--rose);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform .2s;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-item__q {
+  display: inline-block;
+  color: var(--rose);
+  font-family: "Shippori Mincho", serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-right: 8px;
+  vertical-align: baseline;
+}
+
+.faq-item__a {
+  padding: 0 22px 22px 22px;
+}
+
+.faq-item__a p {
+  margin: 0;
+  padding: 16px 18px;
+  background: #f5e8e0;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink);
+  border-left: 3px solid var(--rose);
+}
+
+/* === ENTRY (Final CTA) リッチ版 === */
+.entry__headline {
+  margin: 0 0 18px;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.4;
+}
+
+.entry__headline-sub {
+  font-size: clamp(16px, 4.4vw, 22px);
+  color: rgba(255, 255, 255, .85);
+  font-weight: 500;
+}
+
+.entry__headline-main {
+  display: inline-block;
+  font-size: clamp(30px, 8vw, 46px);
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.entry__lead {
+  font-size: clamp(14px, 4vw, 16px) !important;
+  line-height: 2 !important;
+  color: rgba(255, 255, 255, .92) !important;
+  margin: 0 0 28px !important;
+}
+
+.entry__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px 24px;
+  background: linear-gradient(180deg, #06c755 0%, #04a046 100%);
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(6, 199, 85, .42), inset 0 -3px 0 rgba(0, 0, 0, .15);
+  transition: transform .15s ease, box-shadow .15s ease;
+  margin: 8px auto;
+}
+
+.entry__button:hover,
+.entry__button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(6, 199, 85, .5), inset 0 -3px 0 rgba(0, 0, 0, .15);
+}
+
+.entry__note {
+  margin: 14px 0 18px !important;
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, .8) !important;
+  line-height: 1.7;
+}
+
+/* === PS === */
+.ps {
+  background: var(--paper);
+}
+
+.ps-card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 36px 28px 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  border-top: 4px solid var(--rose);
+}
+
+.ps-card__label {
+  margin: 0 0 16px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--rose);
+  letter-spacing: .08em;
+}
+
+.ps-card__body {
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 2.05;
+  color: var(--ink);
+}
+
+.ps-card__body strong {
+  color: var(--rose-dark);
+  font-weight: 700;
+  background: linear-gradient(transparent 70%, rgba(184, 125, 109, .25) 70%);
+  padding: 0 2px;
+}
+
+.ps-card__sign {
+  margin: 0;
+  text-align: right;
+  font-family: "Shippori Mincho", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--burgundy);
+  padding-top: 16px;
+  border-top: 1px dashed var(--soft);
+}
+
 /* === Story Section (院長メッセージ) === */
 .story {
   background: var(--paper);
@@ -1609,6 +2391,136 @@ p {
 
   .story-sign__name {
     font-size: 20px;
+  }
+
+  .empathy-list li {
+    grid-template-columns: 36px 1fr;
+    padding: 16px 18px 16px 16px;
+    gap: 12px;
+  }
+
+  .empathy-list__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .empathy-list__text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .empathy-bridge {
+    padding: 22px 18px;
+    margin-top: 32px;
+  }
+
+  .empathy-bridge p {
+    font-size: 15px;
+  }
+
+  .wm-card {
+    padding: 22px 18px 20px;
+  }
+
+  .wm-conclusion {
+    padding: 22px 18px;
+    margin-top: 30px;
+  }
+
+  .sol-step__head {
+    padding: 20px 20px 14px;
+  }
+
+  .sol-step__img {
+    height: 180px;
+  }
+
+  .sol-step__points {
+    padding: 18px 20px 22px;
+  }
+
+  .sol-step__points li {
+    font-size: 14px;
+  }
+
+  .mid-cta {
+    padding: 22px 18px;
+    margin-top: 32px;
+  }
+
+  .offer-day {
+    grid-template-columns: 70px 1fr;
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .offer-day__num {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .offer-day h3 {
+    font-size: 15px;
+  }
+
+  .offer-day p {
+    font-size: 12.5px;
+  }
+
+  .offer-bonus {
+    padding: 26px 22px 22px;
+    margin-top: 28px;
+  }
+
+  .offer-bonus__title {
+    font-size: 16px;
+  }
+
+  .offer-bonus__list li {
+    font-size: 13.5px;
+  }
+
+  .faq-item summary {
+    padding: 16px 48px 16px 18px;
+    font-size: 14px;
+  }
+
+  .faq-item summary::after {
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .faq-item__q {
+    font-size: 16px;
+  }
+
+  .faq-item__a {
+    padding: 0 18px 18px;
+  }
+
+  .faq-item__a p {
+    font-size: 13px;
+    padding: 14px 16px;
+  }
+
+  .entry__button {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+
+  .ps-card {
+    padding: 28px 22px 26px;
+  }
+
+  .ps-card__label {
+    font-size: 24px;
+  }
+
+  .ps-card__body {
+    font-size: 14px;
+    line-height: 2;
   }
 
   .hero {
